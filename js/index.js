@@ -33,3 +33,35 @@ console.log(skill.innerHTML)
 skillsList.appendChild(skill)
 
 }
+
+const messageForm = document.getElementsByName("leave_message")[0];
+messageForm.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    const name = e.target.name.value
+    const email = e.target.email.value
+    const message = e.target.message.value
+    console.log`(Name:${name} Email:${email} Message:${message})`;
+    const newMessage = document.createElement("li")
+    newMessage.innerHTML = `<a href="mailto:${email}">email</a><span>:${message}</span>`
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    messageForm.reset()
+});
+const messageSection = document.getElementById("messages")
+const messageList = messageSection.querySelector("ul")
+
+const removeButton=document.createElement("button")
+removeButton.innerHTML = "remove";
+removeButton.type = "button";
+removeButton.addEventListener("click",(e)=>{
+const entry = e.target.parentNode;
+entry.remove();
+});
+
+
+
+
+
+
+
+
