@@ -42,7 +42,7 @@ messageForm.addEventListener("submit", (e) =>{
     const message = e.target.message.value
     console.log`(Name:${name} Email:${email} Message:${message})`;
     const newMessage = document.createElement("li")
-    newMessage.innerHTML = `<a href="mailto:${email}">email</a><span>:${message}</span>`
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> wrote: <span>${message}</span> &nbsp;`
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm.reset()
@@ -57,6 +57,7 @@ removeButton.addEventListener("click",(e)=>{
 const entry = e.target.parentNode;
 entry.remove();
 });
+
 
 
 
