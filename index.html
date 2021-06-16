@@ -4,15 +4,23 @@
     <head>
 <title>My Bio</title>
 <meta charset="UTF-8">
+<link rel="stylesheet"  href="css/index.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@200&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/d6ed03d322.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <section>
+        <section class="about">
+            <img class= "img" src="img/myprofile.png" width="300" height="300">
             <h1>About</h1>
-            <img src="img/tade.JPG" width="300" height="300">
+            
             <p>My name is Tadesse I am 35 years old.I live in seattle 
-            WA.I am married and have two kids.I like playing soccure.</p>
+            WA.I am married and have two kids.I like playing soccer.I started learning code at code the dream because I want to develope my own games.</p>
+           
         </section>
-        <section>
+       
+        <section class="experince"> 
             <h1>Experience</h1>
                 <ul>
                     <li>Chashier at Imperial Parking</li>
@@ -26,19 +34,20 @@
 
             </ul>
         </section>
-        <section>
-            <h1>Connect</h1>
-                <a href="mailto: birbirsatadesse@gmail.com">E-mail</a>
-                <a href="file:///C:/Users/birbi/Desktop/intro-to-programming-eclipse/index.html" target="_blank">indx.html</a>
+    
+        <section class="connect">
+            <h1>Connect Me</h1>
+                
+                  
+                
         </section>
-        <section>
+        <section class="message-area"> 
             <h2>Leave a Message</h2>
-            <form name="leave_message">
-                <fieldset>
-                    <legend>Something you want to say</legend>
+            <form name="leave_message" class="border">
+               
                 <label for="text">Name</label><br>
                 <input type="text" name="name" id="name" required="true"><br>
-                <label for="emial">email</label><br>
+                <label for="email">email</label><br>
                 <input type="email" name="email" id="email" required="true"><br>
                 <label for="message">message</label><br>
                 <textarea name="message" id="message" required="true"></textarea><br>
@@ -46,7 +55,7 @@
 
                 <button type="submit">Submit</button><br>
 
-            </fieldset>
+            
             </form>
         </section>
         <section id="messages" style="display: none;">
@@ -55,7 +64,19 @@
                 
             </ul>
         </section>
-       <footer></footer>
+        
+       <footer>
+
+          
+        <ul>
+            <a href="mailto: birbirsatadesse@gmail.com">E-mail</a>
+            <i class="fab fa-facebook"></i>
+           <a href="https://www.facebook.com/tadesse.reta.7/">Facebook</a>
+           <i class="fab fa-twitter"></i>
+           <a href="https://twitter.com/BirbirsaTadesse?s=03">Twitter</a>
+       </ul>
+   
+       </footer>
         <script src="js/index.js"></script>
     </body>
 </html>
