@@ -1,9 +1,23 @@
-body html {
+
+*{
+  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+ 
+}
+body {
   margin: 0;
   padding: 0;
-}
-.container {
   background-image: url("/img/pic.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+  overflow-y: hidden;
+}
+ .container {
+ 
   width: 100%;
   height: 100%;
   display: flex;
@@ -11,46 +25,69 @@ body html {
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  padding: 0px;
-}
-.about {
+  padding-left: 0px;
+  padding-right: 0px;
+} 
+
+
+
+/* .about {
   
   font-family:Arial,helvetica, sans-serif;
   font-style:italic;
   font-size: 16px;
   text-transform:capitalize;
-  grid-area: about;
-  text-align: center;
+  text-align: center; 
 }
 .img {
   text-align: center;
   width: 200px;
   height: 200px;
-
-    margin-left: 90px;
+  margin-left: 90px;
   
-}
-.experience {
- 
-  grid-area: experince;
+} */
+#experience {
   text-align: center;
 }
-.experience ul li {
+#experience h1{ 
+  font-family: 'Merriweather', serif;
+  font-weight:bold; }
+#experience ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 10px;
+  width:100px;
+  height: 100px;
   text-decoration: none;
   list-style: none;
-  border: 1px solid blue;
-  background-color: #808080;
-  margin: 10px;
+  border: 1px solid black;
+  background-color: #008B8B;
+ 
+}
+#experience ul{
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
 }
 #skills {
   
-  grid-area: skills;
-
   text-align: center;
+}
+#skills h2{
+  font-family: 'Merriweather', serif;
+  font-weight:bold;
 }
 #skills ul {
   list-style: none;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
 }
 #skills ul li {
   width: 70px;
@@ -58,45 +95,85 @@ body html {
   padding: 10px 0;
 
   display: inline-block;
-  border: 1px solid blue;
-  background-color: #808080;
+  border: 1px solid black;
+  background-color: #008B8B;
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 20px;
 }
 .connect {
   
-  grid-area: connect;
+  
   text-align: center;
 }
 .message-area {
-  grid-area: message-area;
   
-  margin: 10px 300px;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
   text-align: center;
 }
 .message-area h2 {
+  font-family: 'Merriweather', serif;
+  font-weight:bold;
   width: 100%
 }
 #messages {
-  background-color: lightblue;
-  grid-area: messages;
+  background-color: whitesmoke;
+  
   width: 100%;
 }
 footer {
-  background-color: lightgreen;
-  grid-area: footer;
+  background-color: #008B8B;
+  
   text-align: center;
   width: 100%; 
+  min-height: 100px;
 }
+ footer ul a {
+  color: whitesmoke;
+  
+} 
+
+
+
 .border {
   font-family: "Roboto", sans-serif;
 
-  background-color: #808080;
-  border: 5px solid #444;
+  background-color: #008B8B;
+  border: 5px solid lightblue;
   border-radius: 30px;
   width: 300px;
   text-align: center;
   margin: 0;
   padding: 25px;
+}
+.border input{
+  border-radius: 20px;
+  height: 30px;
+}
+.border textarea{
+  border-radius: 20px;
+  height: 80px;
+  
+}
+.border button{
+  border-radius: 20px;
+  height: 50px;
+  width: 90px;
+  background-color: rgb(70, 69, 65);
+  color:#008B8B;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {
@@ -113,38 +190,7 @@ footer {
 section {
   width: 100%;
   min-width: 100%;
-  padding: 0px 5%;
 }
-
-ul {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  width: 100%;
-}
-
-ul > li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-}
-
-
-
-.message-area {
-  width: 100%;
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-
-
 #messages > ul {
   flex-wrap: wrap;
 }
@@ -153,16 +199,120 @@ ul > li {
   width: 100%;
   height: 35px;
 }
+
 @media only screen and (max-width: 768px){
   .border{
-    background-color: #7aadf0;
-    border: 5px solid rgb(173, 76, 211);
+    background-color:#48D1CC;
+    border: 5px solid #008B8B;
   }
-  .experience ul li{
-    background-color: hsl(189, 84%, 64%);
+  #experience ul li{
+    background-color: #48D1CC;
   }
   #skills ul li{
-    background-color: hsl(189, 84%, 64%);
+    background-color: #48D1CC;
+  }
+  footer{
+    background-color:#48D1CC;
   }
   
+}
+
+
+
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  min-height:8vh;
+  background-color:#008B8B;
+  font-family: 'Oswald', sans-serif;
+
+  width: 100%;
+  
+  
+}
+
+.logo{
+  color:cornsilk;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  padding: 10px;
+  display:inline-block; 
+   margin-right: 500px;
+}
+.nav_links{
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  list-style: none;
+  float:right;
+  
+}
+.nav_links a{
+  color: cornsilk;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight:bold;
+  font-size: 14px;
+  padding: 1rem;
+  display:block;
+}
+.logo h4{
+  font-size:2.5rem;
+  margin:.5rem;
+}
+.nav_links li:hover{
+  background:white;
+}
+
+.toggle-button{
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  display:none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media only screen and  (max-width: 400px){
+  .toggle-button{
+    display:flex;
+  }
+  
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+
+      }
+      .nav_links{
+        flex-direction: column;
+      }
+}
+h3{
+  float: left;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .navbar{
+    width:100%;
+  }
+  .logo{
+    
+   display: flex;
+   align-items:flex-start;
+  }
 }
