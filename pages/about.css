@@ -1,0 +1,20 @@
+body{
+  background-image: url("/img/856.jpg");
+}
+
+    .about {
+  
+        font-family:Arial,helvetica, sans-serif;
+        font-style:italic;
+        font-size: 16px;
+        text-transform:capitalize;
+        text-align: center; 
+        padding:100px;
+      }
+      .img {
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        margin-left: 90px;
+        
+      }

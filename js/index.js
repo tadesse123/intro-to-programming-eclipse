@@ -61,6 +61,14 @@ newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     e.target.reset();
 });
+function myFunction(){
+    var x= document.getElementById("myTopnav");
+    if (x.className === "topnav"){
+        x.className += "responsive";
+    }else{ 
+        x.className="topnav";
+    }
+}
 //  const btn = document.querySelector("#messages")
 //  btn.addEventListener('click', () =>{
 //      if(messageSection.style.display==="none"){
