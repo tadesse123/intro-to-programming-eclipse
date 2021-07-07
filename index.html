@@ -1,40 +1,97 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-    <title>My Bio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@200&family=Sacramento&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/d6ed03d322.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>My Portifolio</title>
 </head>
-
 <body>
-
-    <div class="topnav" id="myTopnav">
-        
-      <a href="/pages/message.html">Message</a>
-      <a href="/pages/exeperienc.html">experience</a>
-      <a href="/pages/skills.html">skills</a>
-      <a href="/pages/about.html">About</a>
-      <a href="active" href="/index.html">home</a>
-      <a href ="javascript:void(0);" class= "icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-    
-      </div>
-
+    <section>
       
-  <main>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil, libero magnam voluptatem qui maiores!</p>
-  </main>
-  <footer>
+     <div>   
+        <nav class="navbar">  
+          <ul>  
+                    <li><a href="#experience">Experience</a></li>  
+                    <li><a href="#skills">Skills</a></li>  
+                 
+                  <li><a href="#Mess">Messages</a></li>  
+          </ul>  
+      </nav>
+</div>
+    </section>
+    
+<section class="about">
+    <div class="container">
+        <div class="left">
+            <div class="img">
+                <img src="img/myprofile.jpg">
+            </div>
+        </div>
+        <div class="right">
+            <div class= "content">
+                <h1>About</h1>
+                <p> My name is Tadesse I am 35 years old.I live in <b><a href="https://en.wikipedia.org/wiki/Seattle">seattle </a></b>
+            WA.I am married and have two kids.I like playing soccer.I started learning code at <b><a href="https://learn.codethedream.org/">code the dream </a> </b>because I want to develope my own games.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section Id="experience">
+     <div class="exp">
+          
+        <h1>Experience</h1>
+            <ul>
+                <li>Chashier at Imperial Parking</li>
+                <li>Bus Operator at Kingcounty Metro</li>
+                <li>uber and Lyft Driver</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    <section id="skills" >
+        <h2>Skills</h2>
+        <ul>
+
+        </ul>
+    </section>
+    <section id=project>
+        <h2>Project</h2>
+          <ul>
+            
+          </ul>
+    </section>
+       <section class="message-area" id ="Mess"> 
+        <h2>Leave a Message</h2>
+        <form name="leave_message" class="border" >
+           
+            <label for="text">Name</label><br>
+            <input type="text" name="name" id="name" required="true"><br>
+            <label for="email">email</label><br>
+            <input type="email" name="email" id="email" required="true"><br>
+            <label for="message">message</label><br>
+            <textarea name="message" id="message" required="true"></textarea><br>
+            <label for="submit"></label><br>
+
+            <button type="submit">Submit</button><br>
+
+        
+        </form>
+    </section>
+    <section id="messages">
+        <h2>Message</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+    <section>
+     <footer>
   
-     <ul>
+            <ul>
                 <a href="mailto: birbirsatadesse@gmail.com">E-mail</a>
                 <i class="fab fa-facebook"></i>
                 <a href="https://www.facebook.com/tadesse.reta.7/">Facebook</a>
@@ -44,6 +101,7 @@
             </ul>
 
   </footer>
-  <script src="js/index.js"></script>
+  </section>
+    <script src="js/index.js"></script>
 </body>
 </html>
