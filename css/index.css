@@ -6,33 +6,43 @@
 }
 
 .navbar{
-  /* font-size: 0.5rem; */
+ 
   background:#223A5E;
   color: whitesmoke;
   position: fixed;
-  top: 0;
+  top: 0; 
   z-index: 99;
   width: 100%;
+ 
+ /* margin-bottom: 100px;*/
 }
+/* .hamburger{
+  padding: 1rem;
+  margin-bottom: 10px;
+} */
 
 .navbar ul{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size:x-large;
+  font-size:large;
   list-style-type: none;
 
   display: flex; 
-  justify-content: flex-end;
-padding: 1rem;
- /* justify-content: space-around;
-  */
+  /* justify-content: flex-end; */
+ padding: 0.5rem; 
+/* margin-bottom: 10px; */
+  /* justify-content: space-around; */
+  
 }
 .navbar ul li{
   cursor: pointer;
-  padding: 1rem;
+  flex: auto;
+  text-align:center;
+ 
+  /* padding: 1rem;
   
-display: flex;
+display: flex; */
 
-}
+} 
 .navbar ul li:hover{
   background-color:#4F84C4;
   color: #223A5E;;
@@ -40,13 +50,11 @@ display: flex;
 .navbar ul li a{
   color:whitesmoke;
   text-decoration: none;
-
+  
 }
 .navbar ul li a:hover{
   color:#223A5E;
 }
-
-  
 
 .about{
   width: 100%;
@@ -77,9 +85,16 @@ img{
   justify-content: center;
   align-items: center;
  height: 600px;
-padding:20px 30px;
+ margin-bottom: -50px;
+padding:70px 70px;
 border-radius: 50px;
  
+}
+.left h1{
+position: relative;
+margin-left: 130px;
+font-weight:bolder;
+font-size: 30px;
 }
 .right{
   width: 50%;
@@ -94,7 +109,7 @@ background:lightgray;
   margin-left: -150px;
     
 }
-.right h1{
+.right h2{
   font-size: 40px;
   font-weight: lighter;
 }
@@ -139,7 +154,7 @@ background:lightgray;
     list-style-type: none;
     color:white;
   }
-.exp h1{
+.exp h2{
    
     
       font-family: 'Merriweather', sans-serif;
@@ -233,7 +248,9 @@ background:lightgray;
     background-color: #92B6D5;
    margin:5px;
     width: 100%;
-    color:whitesmoke;
+    text-align: center;
+    color:black;
+
   }
   .border {
     font-family: "Roboto", sans-serif;
@@ -277,26 +294,36 @@ background:lightgray;
   
   
   footer ul i{
-    color:mediumblue;
+    color:whitesmoke;
   } 
   footer ul a {
     color: whitesmoke;
     padding: 0 10px;
   }  
+ 
   @media only screen and ( max-width:  400px){
     .navbar ul{
       flex-direction:  column;
+      align-items: center;
+      
+
     }
     .navbar ul li {
       text-align: center;
+    }
+    .about{
+     margin-right: 50px;
+    }
+    .about img{
+     margin-top: 100px;
     }
     #skills ul{
       padding: 0 5px;
   
     }
-    .about{
-      width: 130%;
-    }
+    /* .about{
+/* display:flex; */
+    } */
     #project ul li {
      
       width:100%;
@@ -304,7 +331,7 @@ background:lightgray;
        
       
    
-  }
+  
 
 
 @media only screen and ( max-width:  768px){
@@ -312,6 +339,10 @@ background:lightgray;
     flex-direction: column;
     width:  100%;
     margin:  0 20px;
+  }
+  .navbar ul li{
+    padding-left: 10px;
+
   }
   .left{
     width: 100%;
@@ -333,5 +364,7 @@ background:lightgray;
   width:60%;
 }
    
-
+.about img{
+  width: 100%
+}
 }

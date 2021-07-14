@@ -69,26 +69,38 @@ function myFunction(){
     }
 }
 
-const githubRequest = new XMLHttpRequest();
-const url = "https://api.github.com/users/tadesse123/repos";
-githubRequest.open("GET", url, true);
-githubRequest.send();
-githubRequest.onload = function (){
-    let repositories =JSON.parse(this.response);
-    console.log("before parse" , this.respones);
-    console.log("response" , repositories)
-    let projectSection=document.getElementById("project");
-    let projectList=projectSection.querySelector('ul')
-    for ( let i=0; i<repositories.length; i++){
-        let project = document.createElement('li');
-        project.innerHTML=`
-        <a href="${repositories[i].html_url}">${repositories[i].name}</a>
-        <p>${repositories[i].description}</p>
-        `;
+// const githubRequest = new XMLHttpRequest();
+// const url = "https://api.github.com/users/tadesse123/repos";
+// githubRequest.open("GET", url, true);
+// githubRequest.send();
+// githubRequest.onload = function (){
+//     let repositories =JSON.parse(this.response);
+//     console.log("before parse" , this.respones);
+//     console.log("response" , repositories)
+//     let projectSection=document.getElementById("project");
+//     let projectList=projectSection.querySelector('ul')
+//     for ( let i=0; i<repositories.length; i++){
+//         let project = document.createElement('li');
+//         project.innerHTML=`
+//         <a href="${repositories[i].html_url}">${repositories[i].name}</a>
+//         <p>${repositories[i].description}</p>
+//         `;
       
-        console.log("my repo", repositories[i].name)
-        projectList.appendChild(project)
+//         console.log("my repo", repositories[i].name)
+//         projectList.appendChild(project)
     
 
- }
+//  }
+//  }
+ fetch('https://api.github.com/users/tadesse123/repos')
+ .then(response=>response.json())
+ .then(data=>repo(data))
+ function repo(data){
+     let projectSection=document.getElementById("project");
+     let projectList=projectSection.querySelector('ul');
+     for(let i=0; i < data.length; i++){
+         let project =document.createElement('li');
+         project.innerHTML =`<a href = ${`${data[i].html_url}`}>${data[i].name}</a>`
+         projectList.appendChild(project)
+     }
  }
