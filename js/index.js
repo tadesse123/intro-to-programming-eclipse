@@ -68,30 +68,16 @@ function myFunction(){
         x.className="topnav";
     }
 }
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-// const githubRequest = new XMLHttpRequest();
-// const url = "https://api.github.com/users/tadesse123/repos";
-// githubRequest.open("GET", url, true);
-// githubRequest.send();
-// githubRequest.onload = function (){
-//     let repositories =JSON.parse(this.response);
-//     console.log("before parse" , this.respones);
-//     console.log("response" , repositories)
-//     let projectSection=document.getElementById("project");
-//     let projectList=projectSection.querySelector('ul')
-//     for ( let i=0; i<repositories.length; i++){
-//         let project = document.createElement('li');
-//         project.innerHTML=`
-//         <a href="${repositories[i].html_url}">${repositories[i].name}</a>
-//         <p>${repositories[i].description}</p>
-//         `;
-      
-//         console.log("my repo", repositories[i].name)
-//         projectList.appendChild(project)
-    
+hamburger.addEventListener("click", mobileMenu);
 
-//  }
-//  }
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
  fetch('https://api.github.com/users/tadesse123/repos')
  .then(response=>response.json())
  .then(data=>repo(data))
