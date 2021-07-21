@@ -86,7 +86,7 @@ function mobileMenu() {
      let projectList=projectSection.querySelector('ul');
      for(let i=0; i < data.length; i++){
          let project =document.createElement('li');
-         project.innerHTML =`<a href = ${`${data[i].html_url}`}>${data[i].name}</a>`
+         project.innerHTML =`<a href = ${`${data[i].html_url}`}>${data[i].name } </a>`
          projectList.appendChild(project)
      }
  }
